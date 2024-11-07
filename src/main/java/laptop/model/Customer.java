@@ -13,6 +13,11 @@ public class Customer extends User{
 
     }
 
+    public Customer(String email, String firstName, String lastName, boolean isActive, String password, CustomerType customerType) {
+        super(email, firstName, lastName, isActive, password);
+        this.customerType = customerType;
+    }
+
     public Customer(UUID userId, String email, String firstName, String lastName, boolean isActive, String password, String phoneNumber, CustomerType customerType, LocalDate birthDate, List<Address> addresses) {
         super(userId, email, firstName, lastName, isActive, password);
         this.phoneNumber = phoneNumber;
@@ -21,14 +26,14 @@ public class Customer extends User{
         this.addresses = addresses;
     }
 
-    @Column(name="phone_number", nullable = false)
+    @Column(name="phone_number", nullable = true)
     private String phoneNumber;
 
     @Enumerated(EnumType.STRING)
     @Column(name="customer_type", nullable = false)
     private CustomerType customerType;
 
-    @Column(name="birth_date")
+    @Column(name="birth_date", nullable = true)
     private LocalDate birthDate;
 
     @OneToMany(mappedBy = "customer", cascade = CascadeType.ALL, orphanRemoval = true)

@@ -60,19 +60,19 @@ public class UserDAO {
 
     // Phương thức để tìm kiếm (find) một đối tượng User theo email
     public Optional<User> findByEmail(String email) {
-        return TransactionUtil.execute(
-                em -> {
-                    try {
-                        User user = em.createQuery("SELECT u FROM User u WHERE u.email = :email", User.class)
-                                .setParameter("email", email)
-                                .getSingleResult(); // Thực hiện truy vấn để tìm User theo email
-                        return Optional.ofNullable(user);
-                    } catch (NoResultException e) {
-                        return Optional.empty();
-                    }
-                },
-                false, // Không cần transaction cho thao tác đọc (read)
-                "Lỗi khi tìm user theo email"
-        );
+        try {
+            return TransactionUtil.execute(
+                    em -> {
+                            User user = em.createQuery("SELECT u FROM User u WHERE u.email = :email", User.class)
+                                    .setParameter("email", email)
+                                    .getSingleResult(); // Thực hiện truy vấn để tìm User theo email
+                            return Optional.ofNullable(user);
+                    },
+                    false, // Không cần transaction cho thao tác đọc (read)
+                    "Lỗi khi tìm user theo email"
+            );
+        } catch (RuntimeException e) {
+            return Optional.empty();
+        }
     }
 }
