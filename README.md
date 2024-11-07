@@ -1,6 +1,8 @@
 # E-Commerce Website for Laptops
 > Built using Java Servlet, JSP, JPA - Hibernate
 
+
+
 ## Contributors
 
 
@@ -11,6 +13,10 @@
 - [Heroku](https://www.heroku.com/) - Platform-as-a-service (PaaS) for deployment and hosting
 - [Bootstrap](https://getbootstrap.com/) - Front-end framework for responsive web development
 - [Remote MySQL](https://remotemysql.com/) - Remote database management and access
+
+### Version
+- JDK: 21
+- Tomcat: 10.1.28
 
 ## System Actors
 - Customer
