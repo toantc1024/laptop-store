@@ -6,15 +6,20 @@ import java.util.UUID;
 
 @Entity
 @Table(name = "address")
-public class    Address {
-    public Address(CustomerProfile customerProfile, String state, String city, String street, String testDOG) {
+public class Address {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "id")
+    private UUID id;
 
-        this.customerProfile = customerProfile;
-        this.state = state;
-        this.city = city;
-        this.street = street;
-        this.testDOG = testDOG;
-    }
+    @Column(name = "street", nullable = false)
+    private String street;
+    @Column(name = "city", nullable = false)
+    private String city;
+    @Column(name = "state", nullable = false)
+    private String state;
+    @OneToOne(mappedBy = "address")
+    private CustomerProfile customerProfile;
 
     public Address(CustomerProfile customerProfile, String state, String city, String street) {
         this.customerProfile = customerProfile;
@@ -24,14 +29,6 @@ public class    Address {
     }
 
     public Address() {
-    }
-
-    public String getTestDOG() {
-        return testDOG;
-    }
-
-    public void setTestDOG(String testDOG) {
-        this.testDOG = testDOG;
     }
 
     public String getStreet() {
@@ -73,25 +70,5 @@ public class    Address {
     public void setCustomerProfile(CustomerProfile customerProfile) {
         this.customerProfile = customerProfile;
     }
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id")
-    private UUID id;
-
-    @Column(name="testDOG")
-    private String testDOG;
-
-    @Column(name = "street", nullable = false)
-    private String street;
-
-    @Column(name = "city", nullable = false)
-    private String city;
-
-    @Column(name = "state", nullable = false)
-    private String state;
-
-    @OneToOne(mappedBy = "address")
-    private CustomerProfile customerProfile;
 
 }

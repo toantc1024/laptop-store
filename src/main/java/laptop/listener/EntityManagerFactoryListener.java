@@ -12,7 +12,13 @@ public class EntityManagerFactoryListener implements ServletContextListener {
     @Override
     public void contextInitialized(ServletContextEvent sce) {
         // Dùng để khởi tạo database khi mới chạy chương trình
-        EntityManagerUtil.getEntityManagerFactory();
+        try {
+            EntityManagerUtil.getEntityManagerFactory();
+
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            e.printStackTrace();
+        }
 
         // Thiết lập tài khoản Admin mặc định cho hệ thống
         try {
