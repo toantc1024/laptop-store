@@ -4,7 +4,6 @@
     <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/login.jsp" charset="ISO-8859-1" />
-    <file url="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/login.jsp" charset="ISO-8859-1" />
-    <file url="file://$PROJECT_DIR$/src/main/webapp/views/common/ui/header.jsp" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/customer/views/common/ui/header.jsp" charset="UTF-8" />
   </component>
 </project>
