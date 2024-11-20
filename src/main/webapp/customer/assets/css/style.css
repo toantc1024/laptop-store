@@ -984,6 +984,17 @@ textarea.input {
   color: #D10024;
   border-radius: 50%;
 }
+.error-message {
+  color: #ff4d4d; /* Màu đỏ nổi bật */
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 10px;
+  text-align: center;
+  background-color: #ffe6e6; /* Màu nền nhạt */
+  padding: 10px;
+  border: 1px solid #ff4d4d;
+  border-radius: 5px;
+}
 
 .product .product-body .product-btns>button .tooltipp {
   position: absolute;
@@ -1012,6 +1023,21 @@ textarea.input {
   -webkit-transform: translate(-50%, -5px);
   -ms-transform: translate(-50%, -5px);
   transform: translate(-50%, -5px);
+}
+.row-register {
+  display: flex;               /* Sử dụng Flexbox */
+  justify-content: center;     /* Căn giữa theo chiều ngang */
+  align-items: center;         /* Căn giữa theo chiều dọc */
+  height: 50vh;               /* Chiều cao toàn màn hình */
+  margin: 0;                   /* Xóa margin mặc định */
+}
+
+/* Tùy chỉnh khung đăng ký */
+
+
+/* Hiệu ứng hover cho nút */
+.primary-btn:hover {
+  background-color: #0056b3;   /* Màu xanh đậm khi hover */
 }
 
 .product .add-to-cart {

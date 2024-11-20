@@ -11,7 +11,6 @@
     <%@include file="../common/common-css.jsp" %>
 </head>
 <body>
-
 <%@include file="../common/ui/header.jsp" %>
 
 <div class="section">
