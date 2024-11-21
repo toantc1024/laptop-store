@@ -1,17 +1,10 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: LEGION
-  Date: 11/20/2024
-  Time: 12:46 PM
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Form by coding classic</title>
-    <%@include file="../common/common-css.jsp" %>
+    <title>Login Form</title>
+    <link type="text/css" rel="stylesheet" href="customer/assets/css/Login.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.8/css/all.min.css">
 </head>
 <body>

@@ -984,17 +984,6 @@ textarea.input {
   color: #D10024;
   border-radius: 50%;
 }
-.error-message {
-  color: #ff4d4d; /* Màu đỏ nổi bật */
-  font-size: 14px;
-  font-weight: bold;
-  margin-top: 10px;
-  text-align: center;
-  background-color: #ffe6e6; /* Màu nền nhạt */
-  padding: 10px;
-  border: 1px solid #ff4d4d;
-  border-radius: 5px;
-}
 
 .product .product-body .product-btns>button .tooltipp {
   position: absolute;
@@ -1036,9 +1025,7 @@ textarea.input {
 
 
 /* Hiệu ứng hover cho nút */
-.primary-btn:hover {
-  background-color: #0056b3;   /* Màu xanh đậm khi hover */
-}
+
 
 .product .add-to-cart {
   position: absolute;
@@ -2215,7 +2202,8 @@ textarea.input {
   }
 }
 
-/*Login*/
+
+/*register*/
 * {
   padding: 0;
   margin: 0;
@@ -2230,7 +2218,7 @@ textarea.input {
 
 body {
   background-position: center;
-  background-image: url("../img/pexels-natri-129208.jpg");
+  background-image: url("../img/register-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -2254,58 +2242,36 @@ a:hover {
   background-color: rgba(0, 0, 0, 0.2);
 }
 
-.login_container { /* Sửa lỗi thiếu dấu "." */
+.register_container {
   position: relative;
   backdrop-filter: blur(25px);
-  width: 450px;
+  width: 500px;
   border: 2px solid var(--primary-color);
-  padding: 7.5em 2.5em 4em 2.5em;
+  padding: 3em 2.5em 4em 2.5em;
   border-radius: 15px;
   box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.2);
   color: var(--second-color);
 }
 
-.login_title {
+.register_title {
   position: absolute;
   left: 50%;
-  top: 0;
+  top: -40px;
+  transform: translatex(-50%);
+  background-color: var(--primary-color);
+  border-radius: 50px;
+  width: 150px;
+  height: 80px;
   display: flex;
-  transform: translateX(-50%);
   justify-content: center;
   align-items: center;
-  width: 140px;
-  background-color: var(--primary-color);
-  border-radius: 0 0 20px 20px;
-  height: 70px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
 }
 
-.login_title span {
+.register_title span {
   color: var(--black-color);
-  font-size: 30px;
-}
-
-.login_title::before {
-  content: "";
-  top: 0;
-  left: -30px;
-  position: absolute;
-  border-top-right-radius: 50%;
-  width: 30px;
-  height: 30px;
-  box-shadow: 15px 0 0 0 var(--primary-color);
-  background: transparent;
-}
-
-.login_title::after {
-  content: "";
-  top: 0;
-  position: absolute;
-  height: 30px;
-  right: -30px;
-  width: 30px;
-  background: transparent;
-  border-top-left-radius: 50%;
-  box-shadow: -15px 0 0 0 var(--primary-color);
+  font-size: 24px;
+  font-weight: bold;
 }
 
 .input_wrapper {
@@ -2318,17 +2284,13 @@ a:hover {
 .input_field {
   width: 100%;
   font-size: 16px;
-  height: 55px;
+  height: 50px;
   color: var(--second-color);
   background: transparent;
-  padding-inline: 20px 54px;
+  padding: 0 20px;
   border-radius: 30px;
   border: 2px solid var(--primary-color);
   outline: none;
-}
-
-#user {
-  margin-bottom: 10px;
 }
 
 .label {
@@ -2356,34 +2318,36 @@ a:hover {
   right: 25px;
 }
 
-.remember-forgot {
-  justify-content: space-between;
-  display: flex;
-  font-size: 15px;
+.terms {
+  margin: 20px 0;
+  font-size: 14px;
 }
 
-.input-submit {
-  background: #fff6f6;
+.register_button button {
+  background: var(--primary-color);
   width: 100%;
   height: 50px;
   font-size: 16px;
   border-radius: 30px;
   cursor: pointer;
+  color: var(--black-color);
   font-weight: 500;
   border: none;
   transition: 0.3s;
 }
 
-.input-submit:hover {
-  background: var(--second-color); /* Sửa cú pháp biến */
+.register_button button:hover {
+  background: var(--second-color);
 }
 
-.signup {
+.login_redirect {
   text-align: center;
+  margin-top: 15px;
 }
 
-.signup a {
+.login_redirect a {
   font-weight: 500;
+  color: var(--second-color);
 }
 
 @media only screen and (max-width: 564px) {
@@ -2391,7 +2355,7 @@ a:hover {
     padding: 20px;
   }
 
-  .login_container {
-    padding: 7.5em 1.5em 4em 1.5em;
+  .register_container {
+    padding: 2em 1.5em 4em 1.5em;
   }
 }

@@ -12,6 +12,6 @@ import java.io.IOException;
 public class TestController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.getRequestDispatcher("customer/views/auth/Login.jsp").forward(req, resp);
+        req.getRequestDispatcher("customer/views/auth/register.jsp").forward(req, resp);
     }
 }
