@@ -39,7 +39,7 @@ public class ProductDetail {
         this.imageList = imageList;
         this.product = product;
         this.color = color;
-        this.screenSize = screenSize;
+            this.screenSize = screenSize;
         this.weight = weight;
         this.ssd = ssd;
         this.battery = battery;

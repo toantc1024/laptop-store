@@ -17,7 +17,7 @@ public class Product {
     private String name;
     private long price;
     private String description;
-    private float promotionPercent;
+        private float promotionPercent;
 
     // Mapping
     @OneToMany(mappedBy = "product")

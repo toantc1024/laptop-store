@@ -8,11 +8,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Đăng nhập</title>
-    <%@include file="../common/common-css.jsp" %>
+    <%@include file="../admin/common/common-css.jsp" %>
 </head>
 <body>
 
-<%@include file="../common/ui/header.jsp" %>
+<%@include file="../admin/common/ui/header.jsp" %>
 
 <div class="section">
     <!-- container -->
@@ -195,8 +195,8 @@
     <!-- /container -->
 </div>
 
-<%@include file="../common/ui/footer.jsp" %>
+<%@include file="../admin/common/ui/footer.jsp" %>
 
-<%@include file="../common/common-js.jsp" %>
+<%@include file="../admin/common/common-js.jsp" %>
 </body>
 </html>
